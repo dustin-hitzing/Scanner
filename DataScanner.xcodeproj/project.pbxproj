@@ -14,6 +14,8 @@
 		AD1240AC2B1C025F008BA354 /* DataScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1240AB2B1C025F008BA354 /* DataScannerTests.swift */; };
 		AD1240B62B1C025F008BA354 /* DataScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1240B52B1C025F008BA354 /* DataScannerUITests.swift */; };
 		AD1240B82B1C025F008BA354 /* DataScannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1240B72B1C025F008BA354 /* DataScannerUITestsLaunchTests.swift */; };
+		AD1240C62B1C2AE8008BA354 /* DocumentCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1240C52B1C2AE8008BA354 /* DocumentCamera.swift */; };
+		AD1240C92B1C2DC1008BA354 /* DocumentCameraExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1240C82B1C2DC1008BA354 /* DocumentCameraExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		AD1240B12B1C025F008BA354 /* DataScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1240B52B1C025F008BA354 /* DataScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerUITests.swift; sourceTree = "<group>"; };
 		AD1240B72B1C025F008BA354 /* DataScannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD1240C52B1C2AE8008BA354 /* DocumentCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCamera.swift; sourceTree = "<group>"; };
+		AD1240C82B1C2DC1008BA354 /* DocumentCameraExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCameraExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		AD1240982B1C025E008BA354 /* DataScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AD1240C42B1C2AD4008BA354 /* Scanner */,
 				AD1240992B1C025E008BA354 /* DataScannerApp.swift */,
 				AD12409B2B1C025E008BA354 /* ContentView.swift */,
 				AD12409D2B1C025F008BA354 /* Assets.xcassets */,
@@ -127,6 +132,23 @@
 				AD1240B72B1C025F008BA354 /* DataScannerUITestsLaunchTests.swift */,
 			);
 			path = DataScannerUITests;
+			sourceTree = "<group>";
+		};
+		AD1240C42B1C2AD4008BA354 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				AD1240C72B1C2DA2008BA354 /* Extension */,
+				AD1240C52B1C2AE8008BA354 /* DocumentCamera.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		AD1240C72B1C2DA2008BA354 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD1240C82B1C2DC1008BA354 /* DocumentCameraExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD12409C2B1C025E008BA354 /* ContentView.swift in Sources */,
+				AD1240C92B1C2DC1008BA354 /* DocumentCameraExtension.swift in Sources */,
 				AD12409A2B1C025E008BA354 /* DataScannerApp.swift in Sources */,
+				AD1240C62B1C2AE8008BA354 /* DocumentCamera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +441,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DataScanner/DataScanner.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DataScanner/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -437,7 +463,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SiteOne.DataScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = Dustin.DataScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -453,9 +479,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DataScanner/DataScanner.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DataScanner/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -473,7 +501,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = SiteOne.DataScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = Dustin.DataScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
